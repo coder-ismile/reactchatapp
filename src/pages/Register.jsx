@@ -49,56 +49,18 @@ const Register = () => {
           } catch (err) {
             console.log(err);
             setErr(true);
-            // setLoading(false);
+            setLoading(false);
           }
         });
       });
     } catch (err) {
       setErr(true);
-      // setLoading(false);
+      setLoading(false);
     }
    
   }
-    // try {
-    //   // Create user 
-    //   const res = await createUserWithEmailAndPassword(auth,email,password);
 
-    //   // Create a unique image name 
-    //   const date = new Date.getTime();
-    //   const storageRef = ref(storage, `${displayName + date}`);
-    //   const uploadTask = uploadBytesResumable(storageRef,file);
 
-    //   // Register three observer 
-    //   uploadTask.on(
-    //     (error)=>{
-    //       setErr(true);
-    //       setLoading(false);
-    //     }, 
-    //     ()=>{
-    //       getDownloadURL(uploadTask.snapshot.ref).then( async (downloadURL)=>{
-    //         await updateProfile(res.user,{
-    //           displayName,
-    //           photoURL:downloadURL,
-    //         });
-    //         await setDoc(doc(db,"users", res.user.uid),{
-    //           uid:res.user.uid,
-    //           displayName,
-    //           email,
-    //           photoURL:downloadURL,
-    //         });
-
-    //         await setDoc(doc(db, "userChats", res.user.uid), {});
-    //          navigate("/login");
-
-    //       });
-    //     }
-    //   );
-  
-    // } catch (error) {
-    //   setErr(true)
-    //     setLoading(false);
-    // }
-  // }
 
   return (
     <div className='formContainer'>
